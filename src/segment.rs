@@ -16,7 +16,7 @@ impl<C> Segment<C> {
     ///
     /// The size of the rectangle is reduced so that a vertical and horizontal segment with the
     /// same top left corner don't overlap.
-    pub fn with_reduced_size(mut rect: Rectangle, color: C) -> Self {
+    pub fn with_reduced_size(rect: Rectangle, color: C) -> Self {
         // TODO: handle rects that are too small
         // if rect.size.width > rect.size.height {
         //     let size_offset = rect.size.height / 2 + 1;
