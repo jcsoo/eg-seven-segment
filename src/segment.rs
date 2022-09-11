@@ -18,15 +18,15 @@ impl<C> Segment<C> {
     /// same top left corner don't overlap.
     pub fn with_reduced_size(mut rect: Rectangle, color: C) -> Self {
         // TODO: handle rects that are too small
-        if rect.size.width > rect.size.height {
-            let size_offset = rect.size.height / 2 + 1;
-            rect.top_left += Size::new(size_offset, 0);
-            rect.size.width -= 2 * size_offset;
-        } else {
-            let size_offset = rect.size.width / 2 + 1;
-            rect.top_left += Size::new(0, size_offset);
-            rect.size.height -= 2 * size_offset;
-        }
+        // if rect.size.width > rect.size.height {
+        //     let size_offset = rect.size.height / 2 + 1;
+        //     rect.top_left += Size::new(size_offset, 0);
+        //     rect.size.width -= 2 * size_offset;
+        // } else {
+        //     let size_offset = rect.size.width / 2 + 1;
+        //     rect.top_left += Size::new(0, size_offset);
+        //     rect.size.height -= 2 * size_offset;
+        // }
 
         Self::new(rect, color)
     }
